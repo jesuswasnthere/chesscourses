@@ -1,0 +1,53 @@
+---
+// components/ChessSnow.astro
+Math.random() * 100;
+const pieces = ['♙', '♖', '♘', '♗', '♕', '♚']; // Emojis de piezas
+---
+
+<div id="chess-snow-container"></div>
+
+<style>
+  .chess-piece {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    pointer-events: none;
+    animation: fall linear infinite;
+    opacity: 0.8;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(100vh) rotate(360deg);
+    }
+  }
+</style>
+
+<script>
+  function createSnow() {
+    const container = document.getElementById('chess-snow-container');
+    const piece = document.createElement('div');
+    
+    // Elige una pieza aleatoria
+    const randomPiece = ['♙', '♖', '♘', '♗', '♕', '♔'][Math.floor(Math.random() * 6)];
+    piece.textContent = randomPiece;
+    
+    // Posición horizontal aleatoria
+    piece.style.left = Math.random() * 100 + 'vw';
+    
+    // Velocidad de caída (entre 5s y 15s)
+    piece.style.animationDuration = Math.random() * 10 + 5 + 's';
+    
+    // Tamaño aleatorio
+    piece.style.fontSize = Math.random() * 20 + 12 + 'px';
+    
+    piece.className = 'chess-piece';
+    container.appendChild(piece);
+
+    // Elimina la pieza después de la animación
+    setTimeout(() => piece.remove(), parseFloat(piece.style.animationDuration) * 1000);
+  }
+
+  // Crea una nueva pieza cada 500ms
+  setInterval(createSnow, 500);
+</script>

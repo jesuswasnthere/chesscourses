@@ -1,0 +1,42 @@
+---
+import ClientRouter from 'astro/components/ClientRouter.astro';
+import Navbar from '../components/Navbar.astro';
+import ChessSnow from '../components/ChessSnow.astro';
+import "../styles/global.css";
+interface Props {
+		title: string;
+}
+
+const {title} = Astro.props;
+---
+
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="../styles/global.css">
+		<link rel="icon" type="image/svg+xml" href="/caballo.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<ClientRouter />
+		<ChessSnow />
+		<div>
+			<Navbar />
+			<slot />
+		</div>
+	</body>
+</html>
+
+<style is:global>
+	body {
+		@apply grid place-content-center;
+	}
+
+	body > div {
+		@apply container;
+	}
+</style>

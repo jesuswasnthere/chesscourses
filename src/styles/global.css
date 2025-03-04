@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+  body {
+    background-color: #3c8920;
+    background-image: repeating-conic-gradient(#dee3e6 0deg, #dee3e6 90deg, #8ca2ad 90deg, #8ca2ad 180deg);
+    background-size: 100px 100px;
+    background-position: 0 0;
+    background-repeat: repeat;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
+  }
+
+  .chess-piece {
+    position: fixed;
+    top: -50px;
+    left: 0;
+    font-size: 24px;
+    pointer-events: none; /* Evita interacción con el mouse */
+    animation: fall linear infinite;
+    opacity: 0.8;
+    z-index: -1; /* Manda las piezas detrás del contenido */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  }
+  
+  /* Asegúrate de que el contenedor principal no altere el layout */
+  #chess-snow-container {
+    position: static;
+    overflow: hidden;
+  }
