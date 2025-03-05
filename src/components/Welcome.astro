@@ -1,8 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 
-const cursos = await getCollection('cursos'); // Nombre colección = "cursos"
-console.log(cursos)
+const cursos = await getCollection('cursos');
+console.log(cursos); // Verifica que los datos sean correctos
 ---
 
 <div id="container">
@@ -18,13 +18,23 @@ console.log(cursos)
 						{
 							cursos.map(curso => {
 								const {slug, data} = curso
-								const { title, author, img, description } =
+								const { title, author, img, description, readtime } =
 								data
 		
 								return (
 									<article class="flex">
-										<img src={`/${img}`} alt="title" class="w-fullrounded-lg"/>
-										<h3>{title}</h3>
+										<a href={`/curso/${slug}`} class="mb-2 xl:mb-0 transition hover:scale-110">
+											<img src={`/${img}`} alt="title" class="w-fullrounded-lg"/>
+										</a>
+
+								<div class="flex flex-col justify-center">
+									<h2 transition:name={`title-${slug}`} class="mb-2 text-2xl font-bold leading-tight text-white">
+										{title}
+									</h2>
+
+									<p class="mb-4 text-black-300 max-w-sm">{description}</p>
+									<span class="text-xs">⏳ Lectura en {readtime} minutos</span>
+								</div>
 									</article>
 								)
 							}

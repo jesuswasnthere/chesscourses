@@ -1,4 +1,4 @@
-// src/content/cursos/config.ts
+// src/content/config.ts
 import { defineCollection, z } from "astro:content";
 
 const cursos = defineCollection({
@@ -6,9 +6,8 @@ const cursos = defineCollection({
     title: z.string(),
     author: z.string(),
     img: z.string(),
-    readtime: z.number(),
+    readtime: z.number().optional(), // Campo opcional
     description: z.string(),
-    // Si necesitas el campo "buy" como en tu ejemplo anterior:
   })
 });
 

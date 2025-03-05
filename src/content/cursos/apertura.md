@@ -3,6 +3,7 @@ title: "Aperturas Principales"
 date: "2025-03-04"
 author: Jesús Mariño
 img: apertura.png
+readtime: 10
 description: "Guía de aperturas clásicas."
 toc: true
 tags:
