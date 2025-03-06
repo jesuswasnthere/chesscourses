@@ -25,21 +25,12 @@ Incluye:
 ✅ Estrategias de bloqueo y ataque.
 
 🧩 Conceptos Clave del Medio Juego
-Coordinación de Fuerzas:
 
-Sinergia entre piezas mayores y menores.
+Coordinación de Fuerzas
 
-Ejemplo: Doble torres en columnas abiertas.
+Gestión de Tiempo
 
-Gestión de Tiempo:
-
-Priorizar desarrollo sobre ganancia material.
-
-Ejemplo: Sacrificio de peón por iniciativa (Gambito Volga).
-
-Transformación de Ventajas:
-
-Convertir iniciativa en ventaja estática (ej: estructura de peones).
+Transformación de Ventajas
 
 🛠️ Cómo Trabajaremos
 Análisis de Partidas Modelo:
@@ -48,15 +39,7 @@ Karpov vs Unzicker (dominio del centro).
 
 Petrosian vs Spassky (profilaxis y bloqueo).
 
-Ejercicios Prácticos:
-
-Nivel Básico: Identificar outposts para caballos.
-
-Nivel Avanzado: Sacrificios posicionales (ej: Alfil por 3 peones).
-
-Errores Comunes:
-
-Cómo evitar sobrecargar piezas en posiciones dinámicas.
+Errores Comunes
 
 Posiciones cerradas: Priorizar objetivos estáticos.
 
@@ -66,7 +49,7 @@ Posiciones abiertas: Explotar dinamismo.
 
 Centro Fijo:
 
-Ataque en flancos (ej: Fischer vs. Larsen, 1971).
+Ataque en flancos
 
 Centro Móvil:
 
