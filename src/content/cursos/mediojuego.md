@@ -13,27 +13,50 @@ tags:
   - iniciativa
 ---
 
+📚 Material de Estudio Principal
+Libro base:
+“Mi Sistema” (Aron Nimzowitsch) 📖.
 
-## 🎯 **5 Pilares del Medio Juego**  
-1. **Coordinación de Fuerzas**: Sinergia entre piezas (torres en columnas abiertas, alfiles en diagonales largas).  
-2. **Gestión de Tiempo**: Priorizar desarrollo sobre material (ej: Gambito Volga).  
-3. **Puntos de Inflexión**: Cambiar de plan en el momento adecuado (Regla de Botvinnik).  
-4. **Transformación de Ventajas**: Convertir iniciativa en ventaja estática (ej: estructura de peones).  
-5. **Profundidad Estratégica**: Crear múltiples debilidades enemigas (Principio de Steinitz).  
+Cubre fundamentos posicionales como bloqueo, profilaxis y centralización 🧩.
 
-**Cómo equilibrarlas**:  
-- **Posiciones cerradas**: Priorizar objetivos estáticos.  
-- **Posiciones abiertas**: Explotar dinamismo.  
+Incluye:
+✅ Estructuras de peones 🏰.
+✅ Coordinación de piezas 🤝.
+✅ Estrategias de bloqueo y ataque ⚔️.
 
-## 🛠️ **Planes Típicos por Estructura**  
-1. **Centro Fijo**: Ataque en flancos (ej: Fischer vs. Larsen, 1971).  
-2. **Centro Móvil**: Ruptura central para abrir líneas.  
-3. **Peones Colgantes**: Presionar hasta forzar debilidades.  
+🧩 Conceptos Clave del Medio Juego
 
-## 📈 **Entrenamiento Práctico**  
-### Nivel Intermedio (ELO 1500-1800):  
-- Ejercicios de ruptura (ej: ...f5 en la Siciliana Dragón).  
-- Sacrificios posicionales (ej: Torre por alfil y peón).  
+Coordinación de Fuerzas 🤝
 
-### Nivel Avanzado (ELO 1800+):  
-- Análisis de partidas de Tal (iniciativa tras sacrificios).  
+Gestión de Tiempo ⏳
+
+Transformación de Ventajas 🔄:
+
+Convertir iniciativa en ventaja estática (ej: estructura de peones).
+
+🛠️ Cómo Trabajaremos
+Análisis de Partidas Modelo 🏆:
+
+Karpov vs Unzicker (dominio del centro 🎯).
+
+Petrosian vs Spassky (profilaxis y bloqueo 🛡️).
+
+Errores Comunes ❌:
+
+Posiciones cerradas: Priorizar objetivos estáticos 🧱.
+
+Posiciones abiertas: Explotar dinamismo ⚡.
+
+📈 Planes Típicos por Estructura
+Centro Fijo 🏰:
+
+Ataque en flancos ⚔️.
+
+Centro Móvil 🚀:
+
+Ruptura central para abrir líneas 🛠️.
+
+Peones Colgantes 🎯:
+
+Presionar hasta forzar debilidades 💥.
+

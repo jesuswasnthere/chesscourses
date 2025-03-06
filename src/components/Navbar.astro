@@ -1,16 +1,16 @@
 <nav>
   <ul>
     <li><a href="/">Inicio</a></li>
-    <li><a href="/about">Sobre mi</a></li>
+    <li><a href="/about">Sobre mí</a></li>
   </ul>
 </nav>
 
 <style>
   nav {
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Fondo con gradiente */
+    background: rgba(0, 0, 0, 0.8); /* Fondo negro semi-transparente */
     padding: 15px 20px;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-bottom: 2px solid #d3a625; /* Borde dorado para un toque de elegancia */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
   }
 
   ul {
@@ -26,9 +26,9 @@
   }
 
   a {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Georgia', serif; /* Fuente más clásica */
     text-decoration: none;
-    color: #ffffff;
+    color: #d3a625; /* Color dorado para los enlaces */
     font-size: 18px;
     font-weight: 500;
     padding: 8px 12px;
@@ -37,14 +37,14 @@
   }
 
   a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente al hacer hover */
-    color: #ffffff;
+    background-color: rgba(211, 166, 37, 0.1); /* Fondo semi-transparente dorado al hacer hover */
+    color: #ffffff; /* Texto blanco al hacer hover */
     transform: translateY(-2px); /* Efecto de levitación */
   }
 
   /* Estilo para el enlace activo (si lo necesitas) */
   a[aria-current="page"] {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(211, 166, 37, 0.2); /* Fondo dorado más intenso */
     font-weight: bold;
   }
 </style>
