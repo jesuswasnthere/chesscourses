@@ -1,35 +1,38 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-  return [
-    {
-      params: { id: "estrategia" },
-      props: { title: "Estrategia Posicional: Motivos y Planes" },
-    },
-    {
-      params: { id: "apertura"},
-      props: { title: "Aperturas Principales" },
-    },
-    {
-      params: { id: "finales"},
-      props: { title: "Finales Clásicos: Teoría y Práctica" },
-    },
-    {
-      params: { id: "tactica"},
-      props: { title: "Táctica: Motivos que Deciden Partidas" },
-    },
-    {
-      params: { id: "mediojuego"},
-      props: { title: "Medio Juego: Tensión entre Estática y Dinámica" },
-    },
-  ];
+  const cursos = await getCollection("cursos");
+
+  return cursos.map((curso) => ({
+    params: { id: curso.slug },
+    props: { curso },
+  }));
 }
 
-const { title } = Astro.props;
+const { curso } = Astro.props;
+const { data, slug } = curso;
+const { title, author, img, readtime, description } = data;
+
+const { Content } = await render(curso)
+
+export const prerender = true
 ---
 
 <Layout title={`${title} - Jesus`}>
-  <h1>{title}</h1>
-</Layout>
+    <div class="flex gap-12">
+      <aside class="flex flex-col items-center gap-4">
+        <a href='/' class="hover:underline opacity-70">← Volver atrás</a>
+        <img transition:name={`img-${slug}`} class="rounded w-72 h-auto" src={`/${img}`} alt={title} />
+
+      </aside>
+  
+      <main class="max-w-3xl">
+        <h1 transition:name={`title-${slug}`} class="text-4xl font-bold mb-4">{title}</h1>
+        <div class="prose prose-invert">
+          <Content />
+        </div>
+      </main>
+    </div>
+  </Layout>
