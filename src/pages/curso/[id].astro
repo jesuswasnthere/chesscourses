@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  return [
+    {
+      params: { id: "estrategia" },
+      props: { title: "Estrategia Posicional: Motivos y Planes" },
+    },
+    {
+      params: { id: "apertura"},
+      props: { title: "Aperturas Principales" },
+    },
+    {
+      params: { id: "finales"},
+      props: { title: "Finales Clásicos: Teoría y Práctica" },
+    },
+    {
+      params: { id: "tactica"},
+      props: { title: "Táctica: Motivos que Deciden Partidas" },
+    },
+    {
+      params: { id: "mediojuego"},
+      props: { title: "Medio Juego: Tensión entre Estática y Dinámica" },
+    },
+  ];
+}
+
+const { title } = Astro.props;
+---
+
+<Layout title={`${title} - Jesus`}>
+  <h1>{title}</h1>
+</Layout>

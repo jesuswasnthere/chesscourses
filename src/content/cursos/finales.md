@@ -2,7 +2,7 @@
 title: "Finales Clásicos: Teoría y Práctica"
 date: "2025-03-04"
 author: Jesús Mariño
-img: endgames.png
+img: finales.jpg
 readtime: 10
 description: "Domina la técnica de finales con el método del GM Levenfish y el libro '100 finales que hay que saber'."
 toc: true

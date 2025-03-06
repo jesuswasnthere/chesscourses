@@ -4,7 +4,7 @@ date: "2025-03-04"
 author: Jesús Mariño
 img: apertura2.png
 readtime: 10
-description: "Guía de aperturas clásicas."
+description: "Guía de aperturas clásicas, domina los conceptos básicos y entiende las ideas y planes, basados en los tipos de centro."
 toc: true
 tags:
   - aperturas

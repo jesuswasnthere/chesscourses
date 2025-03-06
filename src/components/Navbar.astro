@@ -7,7 +7,10 @@
 
 <style>
   nav {
-    padding: 10px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Fondo con gradiente */
+    padding: 15px 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
   }
 
   ul {
@@ -15,15 +18,33 @@
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: flex-start; /* Alinear elementos a la izquierda */
   }
 
   li {
-    margin-right: 20px;
+    margin-right: 30px;
   }
 
   a {
-    font-family:sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     text-decoration: none;
     color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px; /* Bordes redondeados para los enlaces */
+    transition: all 0.3s ease; /* Transición suave */
+  }
+
+  a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente al hacer hover */
+    color: #ffffff;
+    transform: translateY(-2px); /* Efecto de levitación */
+  }
+
+  /* Estilo para el enlace activo (si lo necesitas) */
+  a[aria-current="page"] {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
   }
 </style>
