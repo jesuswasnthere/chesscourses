@@ -26,7 +26,7 @@ Tengo un repertorio sólido de aperturas, respaldado por **material de estudio d
 
 Además de mi trayectoria en ajedrez, también me he formado en **manejo de redes sociales, creación de campañas publicitarias y gestión de comunidades online**, aplicando estrategias para potenciar el alcance de proyectos digitales.  
 
-Como apasionado del ajedrez y la tecnología, decidí llevar mi experiencia un paso más allá y desarrollé esta plataforma **desde cero**, combinando mi conocimiento en programación con mi pasión por el juego. Mi objetivo es ofrecer un espacio accesible y bien diseñado para que más personas puedan aprender y mejorar en ajedrez.  
+Como apasionado del ajedrez y la tecnología, decidí llevar mi experiencia un paso más allá y desarrollé esta plataforma **desde cero**, combinando mi conocimiento en programación con mi pasión por el juego. Mi objetivo es ofrecer un curso accesible y bien diseñado para que más personas puedan aprender y mejorar en ajedrez.  
 
 📍 **Vivo en Acarigua** | 📩 Para consultas, contáctame en **[WhatsApp](https://wa.me/+584125249992)**
 👈 Haz click aquí.
