@@ -3,7 +3,7 @@ title: "Táctica: Motivos que Deciden Partidas"
 date: "2025-03-04"
 author: Jesús Mariño
 img: tactic.png
-readtime: 10
+readtime: 5
 description: "Domina combinaciones letales: clavadas, desviaciones y sacrificios forzados con ejercicios de Chess Tempo."
 toc: true
 tags:

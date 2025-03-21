@@ -3,7 +3,7 @@ title: "Medio Juego: Tensión entre Estática y Dinámica"
 date: "2025-03-04"
 author: Jesús Mariño
 img: mediojuego.png
-readtime: 10
+readtime: 5
 description: "Domina la transición crítica entre apertura y finales: planes concretos, rupturas y manejo de iniciativas."
 toc: true
 tags:

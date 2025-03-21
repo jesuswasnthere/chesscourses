@@ -1,5 +1,5 @@
 ---
-title: "Sobre mí"
+title: "Conoce a Jesús Mariño"
 date: "2025-03-20"
 author: Jesús Mariño
 img: jesusmarino.jpg
