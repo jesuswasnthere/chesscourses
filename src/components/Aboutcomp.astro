@@ -1,9 +1,36 @@
+
 <div id="container">
+    <main>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white text-center mt-10 mb-6 tracking-wide">
+            <span class="text-white bg-clip-text">
+                Conoce a Jesús Mariño
+            </span>
+        </h1>
 
-	<main>
-			<h1 class="text-center text font-sans-serif">
-				Sobre mi
-			</h1>
-	</main>
+        <section aria-label="Sobre mí">
+            <div class="px-4 mx-auto max-w-screen-xl">
+                <div class="grid gap-6 md:grid-cols-2">
+          {/* Render only one article */}
+                    <article class="flex flex-col md:flex-row items-center md:items-start bg-gray-900 p-4 rounded-lg">
+                        {/* Contenedor de la imagen con tamaño fijo */}
+                        <div class="w-[350px] h-[400px] flex-shrink-0">
+                            <a href={`/curso/sobremi`} class="mb-2 xl:mb-0 transition hover:scale-110 block w-full h-full">
+                                <img src={`/jesusmarino.jpg`} alt="Sobre mí" class="w-full h-full rounded-lg object-cover aspect-[7/8]"/>
+                            </a>
+                        </div>
 
+                        {/* Contenido del curso */}
+                        <div class="flex flex-col justify-center p-4">
+                            <h2 transition:name={`title-sobremi`} class="px-5 mb-2 text-2xl font-bold leading-tight text-white">
+                                Sobre mí
+                            </h2>
+        
+                            <p class="px-5 mb-4 text-gray-300 max-w-sm">Conoce mi historia en el ajedrez.</p>
+                            <span class="text-xs px-5">⏳ Lectura en 5 minutos</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
 </div>
