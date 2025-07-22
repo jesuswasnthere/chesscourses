@@ -4,8 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
   const cursos = await getCollection("cursos");
-
-  return cursos.map((curso) => ({
+  return cursos.map((curso: any) => ({
     params: { id: curso.slug },
     props: { curso },
   }));
@@ -21,18 +20,17 @@ export const prerender = true
 ---
 
 <Layout title={`${title} - Jesus`}>
-    <div class="flex gap-12">
-      <aside class="flex flex-col items-center gap-4">
-        <a href='/' class="hover:underline opacity-70">← Volver atrás</a>
-        <img transition:name={`img-${slug}`} class="rounded w-72 h-auto" src={`/${img}`} alt={title} />
+  <div class="flex flex-col md:flex-row gap-12">
+    <aside class="flex flex-col items-center gap-4">
+      <a href='/' class="hover:underline opacity-70">← Volver atrás</a>
+      <img class="rounded w-72 h-auto" src={`/${img}`} alt={title} />
+    </aside>
 
-      </aside>
-  
-      <main class="max-w-3xl">
-        <h1 transition:name={`title-${slug}`} class="text-4xl font-bold mb-4">{title}</h1>
-        <div class="prose prose-invert">
-          <Content />
-        </div>
-      </main>
-    </div>
-  </Layout>
+    <main class="max-w-3xl">
+      <h1 class="text-4xl font-bold mb-4">{title}</h1>
+      <div class="prose prose-invert">
+        <Content />
+      </div>
+    </main>
+  </div>
+</Layout>

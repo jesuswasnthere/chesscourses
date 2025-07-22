@@ -24,29 +24,20 @@ const pieces = ['♙', '♖', '♘', '♗', '♕', '♚']; // Emojis de piezas
 </style>
 
 <script>
-  function createSnow() {
-    const container = document.getElementById('chess-snow-container');
-    const piece = document.createElement('div');
-    
-    const randomPiece = ['♙', '♖', '♘', '♗', '♕', '♔'][Math.floor(Math.random() * 6)];
-    piece.textContent = randomPiece;
-    
-    // Posición horizontal aleatoria
-    piece.style.left = Math.random() * 100 + 'vw';
-    
-    // Velocidad de caída (entre 5s y 15s)
-    piece.style.animationDuration = Math.random() * 10 + 5 + 's';
-    
-    // Tamaño aleatorio
-    piece.style.fontSize = Math.random() * 20 + 12 + 'px';
-    
-    piece.className = 'chess-piece';
-    container.appendChild(piece);
-
-    // Elimina la pieza después de la animación
-    setTimeout(() => piece.remove(), parseFloat(piece.style.animationDuration) * 1000);
-  }
-
-  // Crea una nueva pieza cada 500ms
-  setInterval(createSnow, 500);
+  document.addEventListener('DOMContentLoaded', () => {
+    function createSnow() {
+      const container = document.getElementById('chess-snow-container');
+      if (!container) return;
+      const piece = document.createElement('div');
+      const randomPiece = ['♙', '♖', '♘', '♗', '♕', '♔'][Math.floor(Math.random() * 6)];
+      piece.textContent = randomPiece;
+      piece.style.left = Math.random() * 100 + 'vw';
+      piece.style.animationDuration = Math.random() * 10 + 5 + 's';
+      piece.style.fontSize = Math.random() * 20 + 12 + 'px';
+      piece.className = 'chess-piece';
+      container.appendChild(piece);
+      setTimeout(() => piece.remove(), parseFloat(piece.style.animationDuration) * 1000);
+    }
+    setInterval(createSnow, 500);
+  });
 </script>
