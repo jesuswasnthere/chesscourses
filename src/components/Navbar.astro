@@ -1,7 +1,15 @@
-<nav>
-  <ul>
-    <li><a href="/">Inicio</a></li>
-    <li><a href="/about">Sobre mí</a></li>
+<nav class="bg-black/80 border-b-2 border-[#d3a625] shadow-lg px-4 py-3">
+  <ul class="flex flex-col sm:flex-row gap-2 sm:gap-8 items-start sm:items-center">
+    <li>
+      <a href="/" class="font-serif text-[#d3a625] text-lg font-medium px-3 py-2 rounded transition-all duration-300 hover:bg-[#d3a625]/10 hover:text-white hover:-translate-y-0.5" aria-current="page">
+        Inicio
+      </a>
+    </li>
+    <li>
+      <a href="/about" class="font-serif text-[#d3a625] text-lg font-medium px-3 py-2 rounded transition-all duration-300 hover:bg-[#d3a625]/10 hover:text-white hover:-translate-y-0.5">
+        Sobre mí
+      </a>
+    </li>
   </ul>
 </nav>
 
@@ -18,7 +26,15 @@
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-start; /* Alinear elementos a la izquierda */
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 640px) {
+    ul {
+      flex-direction: row;
+      justify-content: flex-start; /* Alinear elementos a la izquierda */
+    }
   }
 
   li {
