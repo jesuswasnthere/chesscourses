@@ -8,6 +8,10 @@
     background-repeat: repeat;
   } */
 
+  .centrao{
+    text-align: center;
+  }
+
   .chess-piece {
     position: fixed;
     top: -50px;
