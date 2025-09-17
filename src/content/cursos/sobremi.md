@@ -16,7 +16,7 @@ tags:
 
 # Sobre mí
 
-Hola, soy **Jesús Mariño**, jugador apasionado de ajedrez desde 2018. Lo que comenzó como un simple hobby se convirtió en una faceta esencial de mi vida. Actualmente, cuento con un **Elo de 2200** en Chess.com y Lichess.org, mientras que en la **FIDE poseo un Elo de 1621 clásico**, aunque solo he participado en dos torneos oficiales.  
+Hola, soy **Jesús Mariño**, jugador apasionado de ajedrez desde 2018. Actualmente, cuento con un **Elo de 2200** en Chess.com y Lichess.org, mientras que en la **FIDE poseo un Elo de 1621 clásico**, aunque solo he participado en dos torneos oficiales.
 
 En 2024, fui el **primer tablero y representante de mi estado en la clasificatoria nacional sub-20 de Venezuela**, aunque por motivos personales no pude asistir al evento final.  
 
