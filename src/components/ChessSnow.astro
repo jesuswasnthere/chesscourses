@@ -1,52 +1,77 @@
 ---
-// components/ChessSnow.astro
-Math.random() * 100;
-const pieces = ['♙', '♖', '♘', '♗', '♕', '♚']; // Emojis de piezas
+// --- Frontmatter (Server-side) ---
+// Aquí podemos definir configuraciones iniciales.
+const chessPieces = ['♙', '♖', '♘', '♗', '♕', '♔'];
 ---
 
-<div id="chess-snow-container"></div>
+<div id="chess-snow-container" class="fixed inset-0 -z-10 overflow-hidden pointer-events-none"></div>
 
 <style>
   .chess-piece {
-    position: fixed;
-    top: -50px;
-    font-size: 24px;
-    pointer-events: none;
+    position: absolute; /* Usamos 'absolute' ya que el contenedor es 'fixed' */
+    top: -50px; /* Inicia fuera de la pantalla */
+    color: rgba(255, 255, 255, 0.7);
     animation: fall linear infinite;
-    opacity: 0.8;
+    will-change: transform; /* Optimización para la animación */
   }
 
+  /* Animación de caída con rotación */
   @keyframes fall {
     to {
-      transform: translateY(100vh) rotate(360deg);
+      transform: translateY(105vh) rotate(360deg);
+    }
+  }
+
+  /* --- Diseño Responsivo --- */
+  /* En pantallas pequeñas, las piezas no serán tan grandes */
+  @media (max-width: 768px) {
+    .chess-piece {
+      /* Aquí podríamos limitar el tamaño máximo si quisiéramos, 
+         pero el script ya lo maneja de forma dinámica y responsiva */
     }
   }
 </style>
 
-<script>
-  function createSnow() {
+<script define:vars={{ chessPieces }}>
+  // --- Client-side Script ---
+  
+  // Función que se ejecuta una sola vez para crear todas las piezas
+  function setupChessFall() {
     const container = document.getElementById('chess-snow-container');
-    const piece = document.createElement('div');
-    
-    const randomPiece = ['♙', '♖', '♘', '♗', '♕', '♔'][Math.floor(Math.random() * 6)];
-    piece.textContent = randomPiece;
-    
-    // Posición horizontal aleatoria
-    piece.style.left = Math.random() * 100 + 'vw';
-    
-    // Velocidad de caída (entre 5s y 15s)
-    piece.style.animationDuration = Math.random() * 10 + 5 + 's';
-    
-    // Tamaño aleatorio
-    piece.style.fontSize = Math.random() * 20 + 12 + 'px';
-    
-    piece.className = 'chess-piece';
-    container.appendChild(piece);
+    if (!container) return;
 
-    // Elimina la pieza después de la animación
-    setTimeout(() => piece.remove(), parseFloat(piece.style.animationDuration) * 1000);
+    // 1. **Cantidad Responsiva**: Calculamos cuántas piezas crear según el ancho.
+    // Menos piezas en móvil, más en escritorio.
+    const pieceCount = Math.floor(window.innerWidth / 75);
+
+    // 2. **Tamaño Responsivo**: Definimos rangos de tamaño para móvil y escritorio.
+    const isMobile = window.innerWidth <= 768;
+    const minSize = isMobile ? 10 : 12;
+    const maxSize = isMobile ? 20 : 32;
+
+    // 3. **Creación Eficiente**: Creamos todas las piezas de una vez.
+    for (let i = 0; i < pieceCount; i++) {
+      const piece = document.createElement('div');
+      piece.className = 'chess-piece';
+
+      // Elige un emoji de pieza al azar del array que pasamos desde el frontmatter
+      piece.textContent = chessPieces[Math.floor(Math.random() * chessPieces.length)];
+      
+      // Posición horizontal aleatoria
+      piece.style.left = `${Math.random() * 100}vw`;
+
+      // Tamaño aleatorio dentro del rango responsivo
+      piece.style.fontSize = `${Math.random() * (maxSize - minSize) + minSize}px`;
+
+      // Duración y retraso aleatorios para un efecto natural e infinito
+      // La animación se repite sola, no necesitamos crear/destruir elementos.
+      piece.style.animationDuration = `${Math.random() * 10 + 8}s`; // Entre 8s y 18s
+      piece.style.animationDelay = `${Math.random() * 10}s`; // Empiezan en momentos distintos
+
+      container.appendChild(piece);
+    }
   }
 
-  // Crea una nueva pieza cada 500ms
-  setInterval(createSnow, 500);
+  // Ejecutamos la función cuando el contenido de la página esté listo.
+  document.addEventListener('DOMContentLoaded', setupChessFall);
 </script>
