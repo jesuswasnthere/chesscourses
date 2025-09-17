@@ -1,26 +1,51 @@
+/* Importa las utilidades de Tailwind CSS */
 @import "tailwindcss";
 
-  /* body {
-    background-color: #3c8920;
-    background-image: repeating-conic-gradient(#dee3e6 0deg, #dee3e6 90deg, #8ca2ad 90deg, #8ca2ad 180deg);
-    background-size: 100px 100px;
-    background-position: 0 0;
-    background-repeat: repeat;
-  } */
+/* Contenedor principal del efecto */
+#chess-snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Permite hacer clic a través de los elementos */
+  z-index: -1; /* Lo pone detrás de todo el contenido */
+  overflow: hidden;
+}
 
+/* Estilo para cada pieza de ajedrez */
+.chess-piece {
+  position: absolute; /* Usamos absolute porque el contenedor es fixed */
+  top: -50px; /* Empieza fuera de la pantalla */
+  
+  /* Tamaño por defecto para PC */
+  font-size: 24px;
+  
+  color: rgba(255, 255, 255, 0.7);
+  animation: fall linear infinite;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+/* Animación de caída */
+@keyframes fall {
+  to {
+    /* Cae hasta un poco más abajo de la pantalla para desaparecer suavemente */
+    transform: translateY(105vh);
+  }
+}
+
+/* --- REGLAS RESPONSIVAS --- */
+
+/* Para Tablets (hasta 768px de ancho) */
+@media (max-width: 768px) {
   .chess-piece {
-    position: fixed;
-    top: -50px;
-    left: 0;
-    font-size: 24px;
-    pointer-events: none;
-    animation: fall linear infinite;
-    opacity: 0.8;
-    z-index: -1;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    font-size: 20px; /* Un poco más pequeño */
   }
+}
 
-  #chess-snow-container {
-    position: static;
-    overflow: hidden;
+/* Para Celulares (hasta 480px de ancho) */
+@media (max-width: 480px) {
+  .chess-piece {
+    font-size: 16px; /* Aún más pequeño para no saturar la pantalla */
   }
+}
