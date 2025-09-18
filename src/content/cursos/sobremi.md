@@ -3,7 +3,7 @@ title: "Conoce a Jesús Mariño"
 date: "2025-03-20"
 author: Jesús Mariño
 img: jesusmarino.jpg
-readtime: 5
+readtime: 3
 description: "Conoce mi historia en el ajedrez."
 toc: true
 tags:

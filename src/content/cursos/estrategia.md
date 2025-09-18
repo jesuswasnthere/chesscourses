@@ -3,7 +3,7 @@ title: "Estrategia Posicional: Motivos y Planes"
 date: "2025-03-04"
 author: Jesús Mariño
 img: strategy.png
-readtime: 5
+readtime: 3
 description: "Domina conceptos estratégicos clave con ejemplos de Chess Tempo y el método de Nimzowitsch en 'Mi Sistema'."
 toc: true
 tags:
