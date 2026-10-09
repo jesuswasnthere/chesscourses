@@ -1,52 +1,77 @@
-<<<<<<< HEAD
-# Astro Starter Kit: Basics
+# Chess Courses — Cursos de ajedrez
 
-```sh
-npm create astro@latest -- --template basics
+Sitio web estático con cursos de ajedrez escritos en Markdown. Cada curso es un archivo de la colección `cursos` y se publica automáticamente en su propia página.
+
+## Cursos incluidos
+
+| Archivo | Tema |
+|---|---|
+| `apertura.md` | Aperturas principales |
+| `mediojuego.md` | Medio juego |
+| `tactica.md` | Táctica |
+| `estrategia.md` | Estrategia |
+| `finales.md` | Finales |
+| `sobremi.md` | Sobre el autor |
+
+## Páginas
+
+| Ruta | Contenido |
+|---|---|
+| `/` | Bienvenida y listado de cursos |
+| `/curso/[id]` | Página de cada curso |
+| `/about` | Sobre mí |
+
+## Stack
+
+Astro (Content Collections) · Tailwind CSS 4 · TypeScript · Zod.
+
+## Estructura
+
+```
+src/
+├── content/
+│   ├── config.ts            # Esquema de la colección "cursos"
+│   └── cursos/*.md          # Un archivo por curso
+├── pages/
+│   ├── index.astro
+│   ├── about.astro
+│   └── curso/[id].astro     # Página dinámica por curso
+├── components/              # Navbar, Welcome, Aboutcomp, ChessSnow (fondo animado)
+├── layouts/Layout.astro
+└── styles/global.css
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Agregar un curso
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Crear `src/content/cursos/<id>.md` con este encabezado:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+```md
+---
+title: "Nombre del curso"
+author: Jesús Mariño
+img: imagen.png
+readtime: 5          # opcional, minutos
+description: "Resumen corto del curso."
+---
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+Contenido del curso en Markdown…
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+La página `/curso/<id>` se genera sola.
 
-## 🧞 Commands
+## Instalación
 
-All commands are run from the root of the project, from a terminal:
+```bash
+npm install
+npm run dev        # http://localhost:4321
+npm run build      # build en ./dist
+npm run preview
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Notas
 
-## 👀 Want to learn more?
+- `package.json` todavía se llama `paginaprimera` e incluye dependencias que no usa el sitio (`next`, `react`, `vue`).
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-=======
-Bailalo roki bailalo roki, ta ta ta ta
->>>>>>> bbd17f74de88b57a0d632156ae7315dacc8fabbb
+---
+
+Desarrollado por **Jesús Mariño** · [Stackvro](https://github.com/jesuswasnthere/stackvro)
